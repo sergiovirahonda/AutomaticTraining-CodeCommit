@@ -152,7 +152,6 @@ def load_data(args):
 def save_model(bucket_name, best_model):
     try:
         print('About to save it to GCP Storage',flush=True)
-        #storage_client = storage.Client.from_service_account_json('/root/AutomaticTrainingCICD-68f56bfa992e.json') #if running locally
         storage_client = storage.Client() #if running on GCP
         bucket = storage_client.bucket(bucket_name)
         print('Bucket: ',bucket)
