@@ -8,8 +8,10 @@ RUN pip install pandas numpy google-cloud-storage scikit-learn opencv-python
 
 RUN apt-get update; apt-get install git -y; apt-get install -y libgl1-mesa-dev
 
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone https://github.com/sergiovirahonda/AutomaticTraining-Dataset.git
-RUN git clone https://github.com/sergiovirahonda/AutomaticTraining-CodeCommit.git
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone https://github.com/sergiovirahonda/AutomaticTraining-CodeCommit.git 
 
 RUN mv /root/AutomaticTraining-CodeCommit/model_assembly.py /root
 RUN mv /root/AutomaticTraining-CodeCommit/task.py /root
