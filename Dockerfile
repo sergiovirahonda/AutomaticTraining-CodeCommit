@@ -10,6 +10,7 @@ RUN apt-get update; apt-get install git -y; apt-get install -y libgl1-mesa-dev
 
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone https://github.com/sergiovirahonda/AutomaticTraining-Dataset.git
+
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone https://github.com/sergiovirahonda/AutomaticTraining-CodeCommit.git 
 

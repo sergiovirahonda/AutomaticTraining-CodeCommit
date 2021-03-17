@@ -68,6 +68,21 @@ If you want to test your recently built container, issue the command:
 docker run gcr.io/automatictrainingcicd/data-commit:latest --epochs 2 --bucket-name=$BUCKET_NAME
 ```
 
+# Step X: Create GKE cluster
+```
+gcloud container clusters create training-cluster --num-nodes=2 --zone=us-central1-a --machine-type="n1-highmem-2" --scopes="gke-default,storage-rw"
+```
+
+# Step X: Deploy training script
+```
+kubectl apply -f ./pod.yaml
+```
+
+# Step X: Track pod status
+```
+kubectl describe pod gke-training-data-commit
+```
+
 # Step 4: Push the Docker image to Google Cloud Platform
 If you have correctly followed the steps suggested before, you must be able to do this. If you don't please check [this](https://cloud.google.com/container-registry/docs/pushing-and-pulling) documentation, might be helpful for you. To push the image, issue the command:
 ```
