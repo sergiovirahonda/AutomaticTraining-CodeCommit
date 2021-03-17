@@ -80,17 +80,17 @@ kubectl apply -f ./pod.yaml
 
 # Step X: Track pod status
 ```
-kubectl describe pod gke-training-data-commit
+kubectl describe pod gke-training-code-commit
 ```
 
 # Step X: Terminate GKE cluster
 ```
-kubectl delete pod gke-training-data-commit
+kubectl delete pod gke-training-code-commit
 ```
 
 # Step X: Terminate GKE cluster
 ```
-gcloud container clusters delete loadbalancedcluster
+gcloud container clusters delete training-cluster
 ```
 
 # Step 4: Push the Docker image to Google Cloud Platform
