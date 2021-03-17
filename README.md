@@ -85,6 +85,11 @@ kubectl describe pod gke-training-data-commit
 
 # Step X: Terminate GKE cluster
 ```
+kubectl delete pod gke-training-data-commit
+```
+
+# Step X: Terminate GKE cluster
+```
 gcloud container clusters delete loadbalancedcluster
 ```
 
