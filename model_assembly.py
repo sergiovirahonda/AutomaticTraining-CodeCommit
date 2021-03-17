@@ -14,6 +14,7 @@ def get_additional_layer(filters,x):
     return x
 
 def get_final_layers(neurons,x):
+    x = layers.SpatialDropout2D(0.2)(x)
     x = layers.Flatten()(x)
     x = layers.Dense(neurons)(x)
     x = layers.Dense(3)(x)

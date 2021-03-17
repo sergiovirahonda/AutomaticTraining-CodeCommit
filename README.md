@@ -58,14 +58,14 @@ Check the [Dockerfile](Dockerfile) to understand how the Docker image is created
 # Step 3: Build the Docker Image
 Issue the command:
 ```
-docker build -f Dockerfile -t $IMAGE_URI ./
+docker build -f Dockerfile -t gcr.io/automatictrainingcicd/data-commit:latest ./
 ```
 This step could take some minutes to complete, keep that in mind.
 
 # Step 3.1: Test your Docker container locally
 If you want to test your recently built container, issue the command:
 ```
-docker run $IMAGE_URI --epochs 2 --bucket-name=$BUCKET_NAME
+docker run gcr.io/automatictrainingcicd/data-commit:latest --epochs 2 --bucket-name=$BUCKET_NAME
 ```
 
 # Step 4: Push the Docker image to Google Cloud Platform

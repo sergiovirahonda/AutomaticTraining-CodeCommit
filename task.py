@@ -100,7 +100,7 @@ def get_args():
                         help='GCP bucket name')
     parser.add_argument('--epochs',
                         type=int,
-                        default=5,
+                        default=3,
                         help='Epochs number')
     args = parser.parse_args()
     return args
