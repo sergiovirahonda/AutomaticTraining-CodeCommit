@@ -4,7 +4,7 @@ metadata:
   name: gke-training-code-commit
 spec:
   backoffLimit: 2
-  activeDeadlineSeconds: 900
+  activeDeadlineSeconds: 1800
   template:
     spec:
       containers:
