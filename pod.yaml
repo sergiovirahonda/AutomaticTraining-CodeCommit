@@ -3,8 +3,9 @@ kind: Job
 metadata:
   name: gke-training-code-commit
 spec:
-  backoffLimit: 2
-  activeDeadlineSeconds: 1800
+  backoffLimit: 1
+  activeDeadlineSeconds: 900
+  ttlSecondsAfterFinished: 60
   template:
     spec:
       containers:
@@ -18,4 +19,4 @@ spec:
                 key: gmail_password
           - name: email_address
             value: svirahonda@gmail.com
-      restartPolicy: Never
+      restartPolicy: OnFailure
