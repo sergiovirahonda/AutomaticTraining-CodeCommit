@@ -44,7 +44,7 @@ def train_model(X_train, X_test, y_train, y_test,args):
     try:
         model_loss, model_acc = [0,0]
         counter = 0
-        while model_acc <= 0.90:
+        while model_acc <= 0.85:
             print('Iteration {}'.format(counter))
             input_img,x = model_assembly.get_base_model()
             if counter == 0:
@@ -69,7 +69,7 @@ def train_model(X_train, X_test, y_train, y_test,args):
             print('Starting model evaluation.',flush=True)
             model_loss, model_acc = cnn.evaluate(X_test, y_test,verbose=2)
             print('Accuracy obtained during model evaluation: {}'.format(model_acc),flush=True)
-            if model_acc > 0.90:
+            if model_acc > 0.85:
                 print('The model has exceeded the accuracy threshold. Attempting to save it onto GCS.',flush=True)
                 saved_ok = data_utils.save_model(args.bucket_name,model_name)
                 if saved_ok[0] == True:
