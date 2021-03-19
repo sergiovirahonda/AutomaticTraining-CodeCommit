@@ -48,7 +48,7 @@ def train_model(X_train, X_test, y_train, y_test,args):
             print('Iteration {}'.format(counter))
             input_img,x = model_assembly.get_base_model()
             if counter == 0:
-                print('Iteration 0.{}'.format(counter))
+                print('Iteration 0.{} '.format(counter))
                 x = model_assembly.get_final_layers(64,x)
             else:
                 for i in range(counter):
